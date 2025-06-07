@@ -71,6 +71,13 @@
         </svg>
     </button>
     
+    <!-- Large Center Audio Toggle Button (shown only when muted) -->
+    <button id="audioToggleCenter" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 p-10 bg-black/50 hover:bg-black/70 rounded-full transition-all">
+        <svg class="w-30 h-30 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 120px; height: 120px;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"></path>
+        </svg>
+    </button>
+    
     <!-- Menu Overlay -->
     <div id="menuOverlay" class="menu-overlay fixed top-0 left-0 w-64 h-full bg-gray-900 text-white z-40 shadow-2xl">
         <div class="p-6 pt-16">
@@ -98,6 +105,7 @@
         const pauseIcon = document.getElementById('pauseIcon');
         const playIcon = document.getElementById('playIcon');
         const audioToggle = document.getElementById('audioToggle');
+        const audioToggleCenter = document.getElementById('audioToggleCenter');
         const audioOnIcon = document.getElementById('audioOnIcon');
         const audioOffIcon = document.getElementById('audioOffIcon');
         const video = document.getElementById('mainVideo');
@@ -135,17 +143,22 @@
         });
         
         // Audio toggle functionality
-        audioToggle.addEventListener('click', function() {
+        function toggleAudio() {
             if (video.muted) {
                 video.muted = false;
                 audioOnIcon.classList.remove('hidden');
                 audioOffIcon.classList.add('hidden');
+                audioToggleCenter.classList.add('hidden');
             } else {
                 video.muted = true;
                 audioOnIcon.classList.add('hidden');
                 audioOffIcon.classList.remove('hidden');
+                audioToggleCenter.classList.remove('hidden');
             }
-        });
+        }
+        
+        audioToggle.addEventListener('click', toggleAudio);
+        audioToggleCenter.addEventListener('click', toggleAudio);
         
         // Video loop with 5 second pause
         video.addEventListener('ended', function() {
