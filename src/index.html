@@ -37,8 +37,8 @@
 <body class="overflow-hidden">
     <!-- Video Container -->
     <div class="video-container">
-        <video id="mainVideo" autoplay loop playsinline>
-            <source src="media/barcelona-slow-hd.m4v" type="video/mp4">
+        <video id="mainVideo" autoplay playsinline>
+            <source src="s3://radioeastbrighton/barcelona-slow-hd.m4v" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -107,6 +107,14 @@
                 audioOnIcon.classList.add('hidden');
                 audioOffIcon.classList.remove('hidden');
             }
+        });
+        
+        // Video loop with 5 second pause
+        video.addEventListener('ended', function() {
+            setTimeout(function() {
+                video.currentTime = 0;
+                video.play();
+            }, 5000); // 5 second pause
         });
         
         // Ensure video plays (some browsers require user interaction)
