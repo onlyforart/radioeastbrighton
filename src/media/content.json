@@ -100,6 +100,14 @@
         },
         {
           "type": "body",
+          "text": "This meditation is also from 2025."
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2109961068%3Fsecret_token%3Ds-lr2D30ptqsJ&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "body",
           "text": "A Dream of my Lover. 2024."
         },
         {
@@ -108,7 +116,7 @@
         },
         {
           "type": "body",
-          "text": "Openings was created during the same period as the Ice and Fire collection."
+          "text": "Openings was created as a part of the Ice and Fire project."
         },
         {
           "type": "soundcloud",
