@@ -84,7 +84,7 @@
             <h2 class="text-xl font-bold mb-6">Menu</h2>
             <nav>
                 <ul class="space-y-4">
-                    <li><a href="#" class="block hover:text-gray-300 transition-colors">About</a></li>
+                    <li><a href="#" id="aboutLink" class="block hover:text-gray-300 transition-colors">About</a></li>
                     <li><a href="#" class="block hover:text-gray-300 transition-colors">Music</a></li>
                     <li><a href="#" class="block hover:text-gray-300 transition-colors">Videos</a></li>
                 </ul>
@@ -94,6 +94,40 @@
     
     <!-- Backdrop for menu -->
     <div id="menuBackdrop" class="fixed inset-0 bg-black/50 z-30 hidden" onclick="toggleMenu()"></div>
+    
+    <!-- About Overlay -->
+    <div id="aboutOverlay" class="fixed inset-20 bg-black/80 backdrop-blur-sm z-40 rounded-lg p-8 overflow-y-auto hidden">
+        <button id="closeAbout" class="absolute top-4 right-4 text-white hover:text-gray-300">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <div class="text-white max-w-4xl mx-auto">
+            <h1 class="text-4xl font-bold mb-6">Radio East Brighton</h1>
+            <p class="text-lg mb-4"><b>Artistic and Musical Explorations</b></p>
+            <img src="media/paul-dj-april2025.JPG" alt="Paul DJing" class="float-right mr-6 mb-4 w-64 rounded-lg">
+            <p class="text-lg mb-4"><b>Paul Smith</b> was born in London in the 1960s. Paul is an accredited teacher of the 5Rhythms&reg;. 
+              He is also a dancer and DJ with more than two decades of experience of conscious dance, improvising with 
+              percussion and electronic music. This website features various projects, none of which are ever "finished" but 
+              all represent some kind of activity along his artistic journey. See also 
+              <a target="_new" href="https://5rhythmswithpaul.com">https://5rhythmswithpaul.com</a>.</p>
+            </p>
+            <p class="text-lg mb-4">Much current work is around a fruitful collaboration with <b>Bela Emerson</b>: Bela is a highly 
+              experienced, skilled, and versatile improvising cellist. She uses her beautiful instrument's full sonic and 
+              emotional range to hold and build creative and connective space, for people to explore and be immersed in 
+              connected playfulness in the moment. See 
+              <a target="_new" href="https://belaemerson.com/cello-movement/">https://belaemerson.com/cello-movement/</a>.</p>
+            <p class="text-lg mb-4">
+              Paul and Bela are creating live and improvised music for 5Rhythms classes, and as a series of wholly improvised 
+              events called <b>Movement Playspaces</b>. These are a dynamic exploration of relationships and interactions 
+              between live music and embodied movement / dance. An improvisational experiment where we sonically 
+              co-create with the dancers in the space. We work with silence, with music, with movement and with stillness. 
+              The music is responsive, spacious, and attuned to the movement: multilayers of cello, live loops, percussion, 
+              electronics, and more. Everything is created live and in the moment - there are no pre-recorded tracks.
+            </p>
+            <!-- Add more content here as needed -->
+        </div>
+    </div>
     
     <script>
         // Get all elements
@@ -108,6 +142,9 @@
         const audioOnIcon = document.getElementById('audioOnIcon');
         const audioOffIcon = document.getElementById('audioOffIcon');
         const video = document.getElementById('mainVideo');
+        const aboutLink = document.getElementById('aboutLink');
+        const aboutOverlay = document.getElementById('aboutOverlay');
+        const closeAbout = document.getElementById('closeAbout');
         
         // Menu toggle functionality
         function toggleMenu() {
@@ -152,12 +189,31 @@
                 video.muted = true;
                 audioOnIcon.classList.add('hidden');
                 audioOffIcon.classList.remove('hidden');
-                audioToggleCenter.classList.remove('hidden');
+                // Only show center audio button if about overlay is not visible
+                if (aboutOverlay.classList.contains('hidden')) {
+                    audioToggleCenter.classList.remove('hidden');
+                }
             }
         }
         
         audioToggle.addEventListener('click', toggleAudio);
         audioToggleCenter.addEventListener('click', toggleAudio);
+        
+        // About overlay functionality
+        aboutLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            aboutOverlay.classList.remove('hidden');
+            audioToggleCenter.classList.add('hidden'); // Hide center audio button when about is shown
+            toggleMenu(); // Close the menu
+        });
+        
+        closeAbout.addEventListener('click', function() {
+            aboutOverlay.classList.add('hidden');
+            // Show center audio button again if audio is muted
+            if (video.muted) {
+                audioToggleCenter.classList.remove('hidden');
+            }
+        });
         
         // Disable right-click on video
         video.addEventListener('contextmenu', function(e) {
