@@ -319,6 +319,36 @@
             }
         });
         
+        // Handle page visibility changes to prevent high-speed playback
+        let wasPlayingBeforeHidden = false;
+        
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                // Page is hidden - pause video to prevent timer issues
+                wasPlayingBeforeHidden = !video.paused;
+                if (wasPlayingBeforeHidden) {
+                    video.pause();
+                }
+            } else {
+                // Page is visible again - resume if it was playing
+                // Use setTimeout to ensure Safari handles this properly
+                if (wasPlayingBeforeHidden) {
+                    setTimeout(function() {
+                        video.play().then(function() {
+                            // Update UI to reflect playing state
+                            pauseIcon.classList.remove('hidden');
+                            playIcon.classList.add('hidden');
+                        }).catch(function(error) {
+                            console.log('Resume play was prevented:', error);
+                            // Update UI to reflect paused state
+                            pauseIcon.classList.add('hidden');
+                            playIcon.classList.remove('hidden');
+                        });
+                    }, 100); // Small delay for Safari
+                }
+            }
+        });
+        
         // Ensure video plays and load content (some browsers require user interaction)
         document.addEventListener('DOMContentLoaded', function() {
             video.play().catch(function(error) {
