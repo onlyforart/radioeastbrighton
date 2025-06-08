@@ -240,16 +240,12 @@
       "title": "Paintings",
       "content": [
         {
-          "type": "title",
-          "text": "Paintings"
+          "type": "image",
+          "src": "paul-painting-1978.jpg"
         },
         {
           "type": "body",
           "text": "1978."
-        },
-        {
-          "type": "image",
-          "src": "paul-painting-1978.jpg"
         }
       ]
     },
