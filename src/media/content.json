@@ -134,6 +134,23 @@
       ]
     },
     {
+      "title": "Paintings",
+      "content": [
+        {
+          "type": "title",
+          "text": "Paintings"
+        },
+        {
+          "type": "body",
+          "text": "1978."
+        },
+        {
+          "type": "image",
+          "src": "paul-painting-1978.jpg"
+        }
+      ]
+    },
+    {
       "title": "There is more",
       "content": [
         {
