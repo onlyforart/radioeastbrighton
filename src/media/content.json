@@ -84,15 +84,31 @@
       ]
     },
     {
-      "title": "Longer works",
+      "title": "Elements",
       "content": [
         {
           "type": "title",
-          "text": "Longer works"
+          "text": "Elements"
         },
         {
           "type": "body",
-          "text": "Created during the same period as the Ice and Fire collection."
+          "text": "Ether. 2025. Inspired by the movement teaching of Silvija Tomcik. This one is best heard reclining, on good headphones or a large sound system, with one's eyes shut. You may need to turn up the volume a bit."
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2090654625%3Fsecret_token%3Ds-0LPz5W0QFyO&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "body",
+          "text": "A Dream of my Lover. 2024."
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1906579760%3Fsecret_token%3Ds-7EsFcsNzRW1&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "body",
+          "text": "Openings was created during the same period as the Ice and Fire collection."
         },
         {
           "type": "soundcloud",
@@ -163,31 +179,6 @@
         {
           "type": "soundcloud",
           "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1377207793%3Fsecret_token%3Ds-TB4Pno9PcIY&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
-        }
-      ]
-    },
-    {
-      "title": "Elements",
-      "content": [
-        {
-          "type": "title",
-          "text": "Elements"
-        },
-        {
-          "type": "body",
-          "text": "Ether. 2025. Inspired by the movement teaching of Silvija Tomcik. This one is best heard reclining, on good headphones or a large sound system, with one's eyes shut. You may need to turn up the volume a bit."
-        },
-        {
-          "type": "soundcloud",
-          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2090654625%3Fsecret_token%3Ds-0LPz5W0QFyO&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
-        },
-        {
-          "type": "body",
-          "text": "A Dream of my Lover. 2024."
-        },
-        {
-          "type": "soundcloud",
-          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1906579760%3Fsecret_token%3Ds-7EsFcsNzRW1&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
         }
       ]
     },
