@@ -1,0 +1,150 @@
+{
+  "menuItems": [
+    {
+      "title": "Remixes",
+      "content": [
+        {
+          "type": "title",
+          "text": "Classical Remixes"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2108524536%3Fsecret_token%3Ds-u6PGFplwnXb&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1652123103%3Fsecret_token%3Ds-gknjk1HAddk&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "body",
+          "text": "The soundtrack to the main video is the third of these: a re-imagining of Satie's Gnossienne no. 4 for virtual Guitar Orchestra."
+        }
+      ]
+    },
+    {
+      "title": "Serenades",
+      "content": [
+        {
+          "type": "title",
+          "text": "Serenades"
+        },
+        {
+          "type": "body",
+          "text": "Recordings from 2025 (Fluted) and 2023."
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1906582340%3Fsecret_token%3Ds-4pvHZB5YPmS&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1391557966%3Fsecret_token%3Ds-PZllMwdeb2D&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1377207793%3Fsecret_token%3Ds-TB4Pno9PcIY&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        }
+      ]
+    },
+    {
+      "title": "Elements",
+      "content": [
+        {
+          "type": "title",
+          "text": "Elements"
+        },
+        {
+          "type": "body",
+          "text": "Ether. 2025. Inspired by the movement teaching of Silvija Tomcik. This one is best heard reclining, on good headphones or a large sound system, with one's eyes shut. You may need to turn up the volume a bit."
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2090654625%3Fsecret_token%3Ds-0LPz5W0QFyO&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "body",
+          "text": "A Dream of my Lover. 2024."
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1906579760%3Fsecret_token%3Ds-7EsFcsNzRW1&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        }
+      ]
+    },
+    {
+      "title": "Glitch",
+      "content": [
+        {
+          "type": "title",
+          "text": "Glitch"
+        },
+        {
+          "type": "body",
+          "text": "2024."
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1907321384%3Fsecret_token%3Ds-eAvUlrbm4cv&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1850359911%3Fsecret_token%3Ds-p5ODk5fXYEl&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1850361045%3Fsecret_token%3Ds-A0l8SvQplnS&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1850363592%3Fsecret_token%3Ds-E3WiYdlvnB1&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2082196299%3Fsecret_token%3Ds-OJFatRL4Nl0&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        }
+      ]
+    },
+    {
+      "title": "Four Meditations",
+      "content": [
+        {
+          "type": "title",
+          "text": "Four Meditations"
+        },
+        {
+          "type": "body",
+          "text": "Four meditations for expressive moment practice. 2023."
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1370075065%3Fsecret_token%3Ds-nZDkIv4NuCI&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1370523322%3Fsecret_token%3Ds-K1OhZyMXewq&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1372625503%3Fsecret_token%3Ds-iq0f3rKOTc9&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1369320400%3Fsecret_token%3Ds-oy4NZuH3mGM&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        }
+      ]
+    },
+    {
+      "title": "There is more",
+      "content": [
+        {
+          "type": "title",
+          "text": "More to be added..."
+        },
+        {
+          "type": "body",
+          "text": "More will be added - there is a lot of material to upload."
+        }
+      ]
+    }
+  ]
+}

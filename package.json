@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf dist && cp -r src dist"
+    "build": "rm -rf dist && cp -r src dist",
+    "serve": "cd src && npx http-server -p 8080 -c-1"
   },
   "repository": {
     "type": "git",

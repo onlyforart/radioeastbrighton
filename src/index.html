@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radio East Brighton</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom styles for fullscreen video */
@@ -44,7 +45,7 @@
     </div>
     
     <!-- Hamburger Menu Button -->
-    <button id="menuToggle" class="fixed top-4 left-4 z-50 p-2 bg-black/50 hover:bg-black/70 rounded-lg transition-colors">
+    <button id="menuToggle" class="fixed top-4 left-4 z-[60] p-2 bg-black/50 hover:bg-black/70 rounded-lg transition-colors">
         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
@@ -79,14 +80,13 @@
     </button>
     
     <!-- Menu Overlay -->
-    <div id="menuOverlay" class="menu-overlay fixed top-0 left-0 w-64 h-full bg-gray-900 text-white z-40 shadow-2xl">
+    <div id="menuOverlay" class="menu-overlay fixed top-0 left-0 w-64 h-full bg-gray-900 text-white z-50 shadow-2xl">
         <div class="p-6 pt-16">
             <h2 class="text-xl font-bold mb-6">Menu</h2>
             <nav>
-                <ul class="space-y-4">
+                <ul class="space-y-4" id="menuList">
                     <li><a href="#" id="aboutLink" class="block hover:text-gray-300 transition-colors">About</a></li>
-                    <li><a href="#" class="block hover:text-gray-300 transition-colors">Music</a></li>
-                    <li><a href="#" class="block hover:text-gray-300 transition-colors">Videos</a></li>
+                    <!-- Dynamic menu items will be inserted here -->
                 </ul>
             </nav>
         </div>
@@ -129,6 +129,18 @@
         </div>
     </div>
     
+    <!-- Dynamic Content Overlay -->
+    <div id="contentOverlay" class="fixed inset-20 bg-black/80 backdrop-blur-sm z-40 rounded-lg p-8 overflow-y-auto hidden">
+        <button id="closeContent" class="absolute top-4 right-4 text-white hover:text-gray-300">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <div id="contentContainer" class="text-white max-w-4xl mx-auto">
+            <!-- Dynamic content will be inserted here -->
+        </div>
+    </div>
+    
     <script>
         // Get all elements
         const menuToggle = document.getElementById('menuToggle');
@@ -145,6 +157,10 @@
         const aboutLink = document.getElementById('aboutLink');
         const aboutOverlay = document.getElementById('aboutOverlay');
         const closeAbout = document.getElementById('closeAbout');
+        const contentOverlay = document.getElementById('contentOverlay');
+        const closeContent = document.getElementById('closeContent');
+        const contentContainer = document.getElementById('contentContainer');
+        const menuList = document.getElementById('menuList');
         
         // Menu toggle functionality
         function toggleMenu() {
@@ -199,10 +215,20 @@
         audioToggle.addEventListener('click', toggleAudio);
         audioToggleCenter.addEventListener('click', toggleAudio);
         
+        // Function to close all overlays
+        function closeAllOverlays() {
+            aboutOverlay.classList.add('hidden');
+            contentOverlay.classList.add('hidden');
+            // Clear content to stop any playing audio
+            contentContainer.innerHTML = '';
+        }
+        
         // About overlay functionality
         aboutLink.addEventListener('click', function(e) {
             e.preventDefault();
+            closeAllOverlays(); // Close any open overlays first
             aboutOverlay.classList.remove('hidden');
+            audioToggle.classList.remove('hidden'); // Show audio toggle button for About overlay
             audioToggleCenter.classList.add('hidden'); // Hide center audio button when about is shown
             toggleMenu(); // Close the menu
         });
@@ -229,11 +255,93 @@
             }, 5000); // 5 second pause
         });
         
-        // Ensure video plays (some browsers require user interaction)
+        // Dynamic content functionality
+        function showContentOverlay(menuItem) {
+            closeAllOverlays(); // Close any open overlays first
+            contentContainer.innerHTML = '';
+            
+            menuItem.content.forEach(item => {
+                if (item.type === 'title') {
+                    const h1 = document.createElement('h1');
+                    h1.className = 'text-4xl font-bold mb-6';
+                    h1.textContent = item.text;
+                    contentContainer.appendChild(h1);
+                } else if (item.type === 'body') {
+                    const p = document.createElement('p');
+                    p.className = 'text-lg mb-4';
+                    p.textContent = item.text;
+                    contentContainer.appendChild(p);
+                } else if (item.type === 'image') {
+                    const img = document.createElement('img');
+                    img.src = 'media/' + item.src;
+                    img.alt = item.alt || '';
+                    img.className = 'w-full max-w-2xl mx-auto mb-6 rounded-lg';
+                    contentContainer.appendChild(img);
+                } else if (item.type === 'soundcloud') {
+                    const div = document.createElement('div');
+                    div.className = 'mb-6';
+                    // Create SoundCloud iframe with standard attributes
+                    const iframe = document.createElement('iframe');
+                    iframe.width = '100%';
+                    iframe.height = '166';
+                    iframe.scrolling = 'no';
+                    iframe.frameBorder = 'no';
+                    iframe.allow = 'autoplay';
+                    iframe.src = item.src;
+                    div.appendChild(iframe);
+                    contentContainer.appendChild(div);
+                }
+            });
+            
+            // Mute the main video when showing content overlay
+            if (!video.muted) {
+                video.muted = true;
+                audioOnIcon.classList.add('hidden');
+                audioOffIcon.classList.remove('hidden');
+            }
+            
+            contentOverlay.classList.remove('hidden');
+            audioToggleCenter.classList.add('hidden');
+            audioToggle.classList.add('hidden'); // Hide audio toggle button for dynamic overlays
+            toggleMenu();
+        }
+        
+        closeContent.addEventListener('click', function() {
+            contentOverlay.classList.add('hidden');
+            audioToggle.classList.remove('hidden'); // Show audio toggle button again
+            // Clear content to stop any playing audio
+            contentContainer.innerHTML = '';
+            // Show center audio button again if audio is still muted
+            if (video.muted) {
+                audioToggleCenter.classList.remove('hidden');
+            }
+        });
+        
+        // Ensure video plays and load content (some browsers require user interaction)
         document.addEventListener('DOMContentLoaded', function() {
             video.play().catch(function(error) {
                 console.log('Auto-play was prevented:', error);
             });
+            
+            // Load content.json and create menu items
+            fetch('media/content.json')
+                .then(response => response.json())
+                .then(data => {
+                    data.menuItems.forEach(menuItem => {
+                        const li = document.createElement('li');
+                        const a = document.createElement('a');
+                        a.href = '#';
+                        a.className = 'block hover:text-gray-300 transition-colors';
+                        a.textContent = menuItem.title;
+                        a.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            showContentOverlay(menuItem);
+                        });
+                        li.appendChild(a);
+                        menuList.appendChild(li);
+                    });
+                })
+                .catch(error => console.error('Error loading content:', error));
         });
     </script>
 </body>
