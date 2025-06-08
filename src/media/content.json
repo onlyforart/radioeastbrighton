@@ -22,6 +22,126 @@
       ]
     },
     {
+      "title": "Voices",
+      "content": [
+        {
+          "type": "title",
+          "text": "Voices"
+        },
+        {
+          "type": "body",
+          "text": "From the same three years starting in 2022 as the Ice and Fire collection, these pieces use the human voice alongside other instruments."
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1368300538%3Fsecret_token%3Ds-INHLryEAwB1&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1368252829%3Fsecret_token%3Ds-wgz3L76pk5Q&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1368299071%3Fsecret_token%3Ds-Ll49M8Kdeql&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        }
+      ]
+    },
+    {
+      "title": "Ice and Fire",
+      "content": [
+        {
+          "type": "title",
+          "text": "Ice and Fire"
+        },
+        {
+          "type": "body",
+          "text": "This collection spans three years starting in 2022."
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1368252325%3Fsecret_token%3Ds-B3RsKcj7Clf&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1368261142%3Fsecret_token%3Ds-27mKghuCkBb&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1368256267%3Fsecret_token%3Ds-TxRO0xqCXT0&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1906581857%3Fsecret_token%3Ds-W6wCXI5KUhy&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1368284803%3Fsecret_token%3Ds-NZZuyFaomo2&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1368298324%3Fsecret_token%3Ds-FscTr8TV1T3&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        }
+      ]
+    },
+    {
+      "title": "Longer works",
+      "content": [
+        {
+          "type": "title",
+          "text": "Longer works"
+        },
+        {
+          "type": "body",
+          "text": "Created during the same period as the Ice and Fire collection."
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1928865713%3Fsecret_token%3Ds-yW07BPHXOfH&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        }
+      ]
+    },
+    {
+      "title": "Glitch",
+      "content": [
+        {
+          "type": "title",
+          "text": "Glitch"
+        },
+        {
+          "type": "body",
+          "text": "Snippets from a continuing project, started early in 2024."
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1907321384%3Fsecret_token%3Ds-eAvUlrbm4cv&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1850359911%3Fsecret_token%3Ds-p5ODk5fXYEl&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1850361045%3Fsecret_token%3Ds-A0l8SvQplnS&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1850363592%3Fsecret_token%3Ds-E3WiYdlvnB1&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2082196299%3Fsecret_token%3Ds-OJFatRL4Nl0&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1906555403%3Fsecret_token%3Ds-TjbHpPEHG5i&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        },
+        {
+          "type": "soundcloud",
+          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1906554962%3Fsecret_token%3Ds-RjrJgOSp6SV&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
+        }
+      ]
+    },
+    {
       "title": "Serenades",
       "content": [
         {
@@ -68,39 +188,6 @@
         {
           "type": "soundcloud",
           "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1906579760%3Fsecret_token%3Ds-7EsFcsNzRW1&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
-        }
-      ]
-    },
-    {
-      "title": "Glitch",
-      "content": [
-        {
-          "type": "title",
-          "text": "Glitch"
-        },
-        {
-          "type": "body",
-          "text": "2024."
-        },
-        {
-          "type": "soundcloud",
-          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1907321384%3Fsecret_token%3Ds-eAvUlrbm4cv&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
-        },
-        {
-          "type": "soundcloud",
-          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1850359911%3Fsecret_token%3Ds-p5ODk5fXYEl&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
-        },
-        {
-          "type": "soundcloud",
-          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1850361045%3Fsecret_token%3Ds-A0l8SvQplnS&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
-        },
-        {
-          "type": "soundcloud",
-          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1850363592%3Fsecret_token%3Ds-E3WiYdlvnB1&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
-        },
-        {
-          "type": "soundcloud",
-          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2082196299%3Fsecret_token%3Ds-OJFatRL4Nl0&color=%23ff5500&inverse=false&auto_play=false&show_user=true"
         }
       ]
     },
