@@ -5,8 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radio East Brighton</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Open Sans', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <style>
+        /* Apply Open Sans to entire document */
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        /* Link hover styles for overlays */
+        #aboutOverlay a:hover,
+        #contentOverlay a:hover {
+            text-decoration: underline;
+        }
+        
         /* Custom styles for fullscreen video */
         .video-container {
             position: fixed;
@@ -106,26 +131,26 @@
             <h1 class="text-4xl font-bold mb-6">Radio East Brighton</h1>
             <p class="text-lg mb-4"><b>Artistic and Musical Explorations</b></p>
             <img src="media/paul-dj-april2025.JPG" alt="Paul DJing" class="float-right mr-4 md:mr-6 mb-4 w-32 md:w-64 rounded-lg">
-            <p class="text-lg mb-4"><b>Paul Smith</b> was born in London in the 1960s. Paul is an accredited teacher of the 5Rhythms&reg;. 
+            <p class="text-lg mb-4 font-light"><b>Paul Smith</b> was born in London in the 1960s. Paul is an accredited teacher of the 5Rhythms&reg;. 
               He is also a dancer and DJ with more than two decades of experience of conscious dance, improvising with 
               percussion and electronic music. This website features various projects, none of which are ever "finished" but 
               all represent some kind of activity along his artistic journey. See also 
               <a target="_blank" href="https://5rhythmswithpaul.com">https://5rhythmswithpaul.com</a> and 
               <a target="_blank" href="https://onlyforart.com">https://onlyforart.com</a>.</p>
             </p>
-            <p class="text-lg mb-4">Much current work is around a fruitful collaboration with <b>Bela Emerson</b>.
+            <p class="text-lg mb-4 font-light">Much current work is around a fruitful collaboration with <b>Bela Emerson</b>.
               Hopefully we can share some recordings of this soon. Bela is a highly 
               experienced, skilled, and versatile improvising cellist. She uses her beautiful instrument's full sonic and 
               emotional range to hold and build creative and connective space, for people to explore and be immersed in 
               connected playfulness in the moment. See 
               <a target="_new" href="https://belaemerson.com/cello-movement/">https://belaemerson.com/cello-movement/</a>.</p>
-            <p class="text-lg mb-4">
+            <p class="text-lg mb-4 font-light">
               Paul and Bela are creating live and improvised music for 5Rhythms classes, and as a series of wholly improvised 
               events called <b>Movement Playspaces</b>. These are a dynamic exploration of relationships and interactions 
               between live music and embodied movement / dance. An improvisational experiment where we sonically 
               co-create with the dancers in the space. We work with silence, with music, with movement and with stillness. 
               The music is responsive, spacious, and attuned to the movement: multilayers of cello, live loops, percussion, 
-              electronics, and more. Everything is created live and in the moment - there are no pre-recorded tracks.
+              electronics, and more. Everything is created live and in the moment - no pre-recorded tracks.
             </p>
             <!-- Add more content here as needed -->
         </div>
@@ -270,7 +295,7 @@
                     contentContainer.appendChild(h1);
                 } else if (item.type === 'body') {
                     const p = document.createElement('p');
-                    p.className = 'text-lg mb-4';
+                    p.className = 'text-lg mb-4 font-light';
                     p.textContent = item.text;
                     contentContainer.appendChild(p);
                 } else if (item.type === 'image') {
